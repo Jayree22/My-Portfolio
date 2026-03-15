@@ -1,10 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function HomePage() {
-  // Animation variants for staggered appearance
-  const containerVariants = {
+  // Container variants for staggering children
+  const containerVariants: Variants = {
     hidden: {},
     visible: {
       transition: {
@@ -13,9 +13,14 @@ export default function HomePage() {
     },
   };
 
-  const itemVariants = {
+  // Item variants for individual elements
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }, // TS-safe
+    },
   };
 
   return (
@@ -25,7 +30,7 @@ export default function HomePage() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/Home-Image.png')" }}
       />
-      
+
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
