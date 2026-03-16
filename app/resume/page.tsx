@@ -122,7 +122,7 @@ export default function ResumePage() {
           My <span className="text-white">Skill Set</span>
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 mb-24 sm:mb-32 items-start">
 
           {/* Left Column */}
           <motion.div
@@ -332,7 +332,7 @@ export default function ResumePage() {
         {/* Download Resume */}
         <div className="flex justify-center mt-12">
           <a
-            href="/Resume.pdf"
+            href="/JERRY'S_RESUME.pdf"
             download
             className="px-6 py-3 bg-[#E55B3F] text-black font-semibold rounded-md hover:bg-orange-600 hover:scale-105 transition-all duration-300"
           >
